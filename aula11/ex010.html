@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAM</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+            background-color: #78A1BB;
+            background-image: url(imagens/pexels.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 10px;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 750px;
+            height: 600px;
+            border: 1px solid black;
+            margin: auto;
+            margin-top: 100px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.418);
+            text-align: center;
+        }
+        
+        .paragrafo-1 {
+            padding: 20px;
+        }
+
+        #txtvel {
+            background-color: #e7e1f5;
+            border:  1px solid black;
+        }
+
+        #botao {
+            margin-top: 10px;
+            padding: 4px;
+        }
+
+        .paragrafo-verde {
+            color: green;
+        }
+
+        .paragrafo-vermelho {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Sistemas de Multas</h1>
+        <hr>
+
+        <p class="paragrafo-1">Digite a velocidade do seu veiculo para saber se foi multado ou não.</p>
+
+        <P class="paragrafo-2">Velocidade em Km/h:</P>
+        
+        <input type="number" name="txtvel" id="txtvel">
+
+        <br>
+
+        <input type="button" value="Verificar" onclick="calcular()" id="botao">
+
+        <div id="res"></div>
+
+        <script>
+            function calcular() {
+                var txtv = document.querySelector('input#txtvel')
+                var res = window.document.querySelector('div#res')
+                var vel = Number(txtvel.value)
+                res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+                if (vel > 60) {
+                    res.innerHTML += '<p class="paragrafo-vermelho">Você ultrapassou o limite de velocidade e foi <strong>MULTADO!</strong></p>'
+                } else {
+                    res.innerHTML += '<p class="paragrafo-verde">PARABÉNS! Você não ultrapassou o limite de velocidade.</p>'
+                }
+                res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+            }
+        </script>
+    </main>
+</body>
+</html>
