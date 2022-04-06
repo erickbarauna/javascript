@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site interativo</title>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <main>
+        <p>Agora são </p>
+        <div id="img"></div>
+    </main>
+    <a href="">@ CursoemVídeo</a>
+    <script>
+        var agora = new Date()
+        var hora = 00
+        var imagem = document.getElementById('img')
+        if (hora >= 6 && hora < 12) {
+            imagem.innerHTML = '<img src="imagens/manha.jpg" alt="|"></img>'
+        } else if (hora >= 12 && hora < 17) {
+            imagem.innerHTML = '<img src="imagens/manha-1.jpg" alt="|">  </img>'
+        } else if (hora > 16 && hora < 20) {
+            imagem.innerHTML = '<img src="imagens/tarde.jpg" alt="">  </img>'
+        } else {
+            imagem.innerHTML = '<img src="imagens/noite.jpg" alt="">  </img>'
+        }
+    </script>
+</body>
+</html>
