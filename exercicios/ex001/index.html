@@ -12,8 +12,9 @@
 
         img {
             border-radius: 50%;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
+            padding: 10px;
         }
 
         h1 {
@@ -23,7 +24,7 @@
         }
 
         main {
-            height: 280px;
+            height: 300px;
             width: 400px;
             margin: auto;
             margin-bottom: 15px;
@@ -41,6 +42,15 @@
             margin: 0;
         }
 
+        input {
+            width: 80px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0);
+            background-color: rgba(187, 178, 178, 0.247);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.664);
+    
+        }
+
         a {
             text-decoration: none;
             color: white;
@@ -54,27 +64,40 @@
 </head>
 <body>
     <h1>Hora do Dia</h1>
+    <hr>
+    
     <main>
-        <p>Agora são </p>
+        <p id="horario"></p>
+        <input type="text" id="txt">
         <div id="img"></div>
+        
     </main>
     <a href="https://www.cursoemvideo.com/" target="_blank"><i>© CursoemVídeo</i></a>
     <script>
         var agora = new Date()
-        var hora = 7
+        var hora = 18
         var imagem = document.getElementById('img')
+        var agoraSao = document.getElementById('horario')
+        if (hora == 00) {
+            agoraSao.innerText = 'Agora são ' + hora + ' horas (ou meia noite)'
+        } else if (hora == 1) {
+            agoraSao.innerText = 'Agora são ' + hora + ' hora'
+        } else {
+            agoraSao.innerText = 'Agora são ' + hora + ' horas'
+        }
+
         if (hora >= 6 && hora < 12) {
             imagem.innerHTML = '<img src="imagens/manha-recortada.jpg" alt="|"></img>'
             document.body.style.backgroundColor = '#AEB5BB'
         } else if (hora >= 12 && hora < 17) {
             imagem.innerHTML = '<img src="imagens/manha-1-200.jpg" alt="|">  </img>'
-            document.body.style.backgroundColor = '#e7eebda8'
+            document.body.style.backgroundColor = '#B9BF99'
         } else if (hora > 16 && hora < 20) {
             imagem.innerHTML = '<img src="imagens/tarde.jpg" alt="">  </img>'
-            document.body.style.backgroundColor = '#c27e57c9'
+            document.body.style.backgroundColor = '#B38374'
         } else {
             imagem.innerHTML = '<img src="imagens/noite-recortada-02.jpg" alt="">  </img>'
-            document.body.style.backgroundColor = '#2A2A2A'
+            document.body.style.backgroundColor = '#3D7A87'
         }
     </script>
 </body>
