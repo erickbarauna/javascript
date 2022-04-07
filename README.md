@@ -3,4 +3,4 @@ Curso de JavaScript do Curso em Vídeo
 
 Acesse
 
-<a href="https://www.youtube.com/watch?v=_jI3782DGDc">Acesse</a>
+<a href="https://erickbarauna.github.io/javascript/execicios/ex001/index.html">Acesse</a>
