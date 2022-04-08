@@ -99,9 +99,10 @@
     <script>
         var agora = new Date()
         var hora = agora.getHours()
+        var horaSeg = agora.getMinutes()
         var imagem = document.getElementById('img')
         var agoraSao = document.getElementById('horario')
-
+        
         function manha() {
             var agora = new Date()
             var hora = 6
@@ -220,11 +221,11 @@
 
 
         if (hora == 00) {
-            agoraSao.innerText = '0' + hora + ':00' + ' - meia noite'
+            agoraSao.innerText = '0' + hora + ':' + horaSeg + ' - meia noite'
         } else if (hora < 10) {
-            agoraSao.innerText = '0' + hora + ':00' + ' hora'
+            agoraSao.innerText = '0' + hora + ':' + horaSeg + ' hora'
         } else {
-            agoraSao.innerText = hora + ':00' + ' horas'
+            agoraSao.innerText = hora + ':' + horaSeg + ' horas'
         }
 
         if (hora >= 6 && hora < 12) {
