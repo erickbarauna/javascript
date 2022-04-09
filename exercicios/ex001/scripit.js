@@ -50,6 +50,8 @@ if (hora == 00) {
     agoraSao.innerText = '0' + hora + ':' + horaSeg + ' - meia noite'
 } else if (hora == 1) {
     agoraSao.innerText = '0' + hora + ':' + horaSeg + ' hora'
+} else if (horaSeg < 10) {
+    agoraSao.innerText = hora + ':' + '0' + horaSeg + ' horas'
 } else {
     agoraSao.innerText = hora + ':' + horaSeg + ' horas'
 }
