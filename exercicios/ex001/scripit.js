@@ -5,42 +5,33 @@ var imagem = document.getElementById('img')
 var agoraSao = document.getElementById('horario')
 
 function manha() {
-    var hora = 6
     var imagem = document.getElementById('img')
     var agoraSao = document.getElementById('horario')
-
-    agoraSao.innerText = hora + ':00' + ' horas'
+    agoraSao.innerText = '06:00 horas'
     imagem.innerHTML = '<img src="imagens/manha-recortada.jpg" alt="|"></img>'
     document.body.style.backgroundColor = '#AEB5BB'
 }
 
 function tarde() {
-    var hora = 12
     var imagem = document.getElementById('img')
     var agoraSao = document.getElementById('horario')
-    
-    agoraSao.innerText = hora + ':00' + ' horas'
+    agoraSao.innerText = '12:00 horas'
     imagem.innerHTML = '<img src="imagens/pexels-definitivo.jpg" alt="|">  </img>'
-    document.body.style.backgroundColor = '#B9BF99'
-    
+    document.body.style.backgroundColor = '#B9BF99' 
 }
 
 function entardecer() {
-    var hora = 18
     var imagem = document.getElementById('img')
     var agoraSao = document.getElementById('horario')
-    
-    agoraSao.innerText = hora + ':00' + ' horas'
+    agoraSao.innerText = '18:00 horas'
     imagem.innerHTML = '<img src="imagens/tarde.jpg" alt="">  </img>'
     document.body.style.backgroundColor = '#B38374'
 }
 
 function noite() {
-    var hora = 0
     var imagem = document.getElementById('img')
     var agoraSao = document.getElementById('horario')
-    
-    agoraSao.innerText = '0' + hora + ':00' + ' - meia noite'
+    agoraSao.innerText = '00:00 - meia noite'
     imagem.innerHTML = '<img src="imagens/noite-recortada-02.jpg" alt="">  </img>'
     document.body.style.backgroundColor = '#3D7A87'
 }
