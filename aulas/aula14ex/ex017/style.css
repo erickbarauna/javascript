@@ -1,0 +1,31 @@
+body {
+    background-color: rgba(0, 60, 255, 0.459);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+main {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.301);
+}
+
+footer {
+    margin: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
